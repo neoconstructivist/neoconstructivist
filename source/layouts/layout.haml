@@ -1,0 +1,10 @@
+!!!
+%html{lang: "en"}
+  %head
+    = partial "partials/head_meta"
+    %title Title
+    = stylesheet_link_tag "main"
+  %body
+    %main
+      = yield
+    = partial "partials/analytics"

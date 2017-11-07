@@ -15,6 +15,7 @@ set :markdown,
   tables: true,
   with_toc_data: true
 set :markdown_engine, :redcarpet
+set :haml, { format: :html5 }
 
 page "/*.json", layout: false
 page "/*.txt", layout: false
