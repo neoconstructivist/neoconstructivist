@@ -5,6 +5,8 @@
     %title Title
     = stylesheet_link_tag "main"
   %body
-    %main
-      = yield
+    .wrapper
+      = partial "partials/header"
+      %main
+        = yield
     = partial "partials/analytics"

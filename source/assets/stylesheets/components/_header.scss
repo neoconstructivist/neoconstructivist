@@ -1,0 +1,81 @@
+.page-header {
+  @include grid-container;
+
+  padding: 25px 0;
+
+  background-color: $base-background-color;
+
+  @media (min-width: $medium-screen) {
+    padding: 45px 0;
+  }
+}
+
+.logo {
+  @include grid-column(12);
+
+  @media (min-width: $medium-screen) {
+    @include grid-column(6);
+  }
+}
+
+.logo__link {
+  color: $base-font-color;
+
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.7px;
+
+  &:hover {
+    color: $base-font-color;
+  }
+}
+
+.logo__image {
+  width: auto;
+  height: 18px;
+}
+
+.menu {
+  display: block;
+
+  @media (min-width: $medium-screen) {
+    @include grid-column(6);
+  }
+}
+
+.menu__list {
+  padding-top: 45px;
+  font-size: 0;
+
+  @media (min-width: $medium-screen) {
+    padding-top: 0;
+  }
+}
+
+.menu__item {
+  display: inline-block;
+  margin-left: 15px;
+
+  font-size: 18px;
+  line-height: 1.35;
+  vertical-align: middle;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media (min-width: $medium-screen) {
+    margin-left: 30px;
+  }
+}
+
+.menu__link {
+  color: $base-font-color;
+  text-decoration: none;
+  border-bottom: 1px solid $base-font-color;
+
+  &:hover {
+    color: $base-font-color;
+    border-bottom: 0;
+  }
+}
