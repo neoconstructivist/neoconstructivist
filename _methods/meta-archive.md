@@ -7,6 +7,7 @@ content: >-
   method is based on the idea of nonlinear development of historic event. The
   event can stay unfinished and not pass to the category of the past but
   circulate influencing the categories of the present and the future.
-image: /source/1-MA.jpg
+image: /assets/images/uploads/1-MA.jpg
+light: true
 ---
 
