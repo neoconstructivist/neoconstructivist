@@ -11,7 +11,7 @@ public_folder: assets/images/uploads
 collections:
   - name: methods
     label: Method
-    folder: data/methods
+    folder: data/strategies
     create: true
     fields:
       - {label: Title, name: title, widget: string, tagname: h1}
