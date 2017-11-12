@@ -1,0 +1,13 @@
+---
+title: Meta Archive
+description: Dynamic archive of objects and their contextual fields
+content: >-
+  A research method aimed at study of the nature of events through influence on
+  the objects of events plunged in the archive with the layers of contexts. The
+  method is based on the idea of nonlinear development of historic event. The
+  event can stay unfinished and not pass to the category of the past but
+  circulate influencing the categories of the present and the future.
+image: /assets/images/uploads/1-MA.jpg
+light: true
+---
+
