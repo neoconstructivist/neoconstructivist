@@ -3,15 +3,13 @@ backend:
   repo: neoconstructivist/neoconstructivist
   branch: master
 
-publish_mode: editorial_workflow
-
 media_folder: source/assets/images/uploads
 public_folder: assets/images/uploads
 
 collections:
   - name: methods
     label: Method
-    folder: data/strategies
+    folder: _methods
     create: true
     fields:
       - {label: Title, name: title, widget: string, tagname: h1}
