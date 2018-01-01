@@ -17,3 +17,13 @@ collections:
       - {label: Content, name: content, widget: markdown}
       - {label: Image, name: image, widget: image}
       - {label: Light, name: light, widget: boolean, default: false}
+  - name: pages
+    label: Pages
+    files:
+      - name: intro
+        label: Intro
+        file: _data/intro.yml
+        description: Intro text on index page
+        fields:
+          - {label: Title, name: title, widget: string, tagname: h1}
+          - {label: Text, name: text, widget: text, tagname: p}
