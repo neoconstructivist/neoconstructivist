@@ -22,7 +22,7 @@ collections:
     files:
       - name: intro
         label: Intro
-        file: _data/intro.yml
+        file: data/intro.yml
         description: Intro text on index page
         fields:
           - {label: Title, name: title, widget: string, tagname: h1}
