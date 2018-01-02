@@ -1,0 +1,36 @@
+
+%article.project__row
+  .project__item
+    = link_to "../../work/#{project.slug}/" do
+      = image_tag project.images[0].url, class: "project__image"
+  .project__info
+    %h1.project__title
+      = link_to "../../work/#{project.slug}/", class: "project__link" do
+        = project.title
+    %h2.project__description
+      = project.description
+    - if !project.introduction.nil?
+      %p.project__preview
+        = project.introduction
+    - if !project.category.nil?
+      .project__category
+        %ul.category__list
+          - project.each do |key, value|
+            - if key == "strategy" 
+              - if !value.nil?
+                - value.each do |tag|
+                  %li.category__item
+                    = link_to "../../methods/#{tag.parameterize}/", class: "category__link" do
+                      = tag
+            - if key == "domain"
+              - if !value.nil?
+                - value.each do |tag|
+                  %li.category__item
+                    = link_to "../../domains/#{tag.parameterize}/", class: "category__link" do
+                      = tag
+            - if key == "category"
+              - if !value.nil?
+                - value.each do |tag|
+                  %li.category__item
+                    = link_to "../../categories/#{tag.parameterize}/", class: "category__link" do
+                      = tag

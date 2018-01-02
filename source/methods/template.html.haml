@@ -3,3 +3,11 @@ title: strategy
 ---
 
 = partial "partials/intro", locals: { strategy: strategy }
+
+%section.project-wrapper
+  - if data.respond_to?(:projects)
+    - data.projects.each do |id, project|
+      - if project.strategies.present?
+        - project.strategies.each do |strategy|
+          - if strategy == strategy.title
+            = partial "partials/project", locals: { project: project }
