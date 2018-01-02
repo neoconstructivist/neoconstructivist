@@ -1,6 +1,6 @@
 %article.method__item
-  = link_to "methods/#{method.title.parameterize}", class: "method__link" do
-    = image_tag method.image, class: "method__image"
+  = link_to "methods/#{strategy.title.parameterize}", class: "method__link" do
+    = image_tag strategy.image, class: "method__image"
     .method__meta
-      %h2{class: "method__title #{light?(method.light)}"}
-        = method.title
+      %h2{class: "method__title #{light?(strategy.light)}"}
+        = strategy.title

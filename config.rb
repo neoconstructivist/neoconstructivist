@@ -25,10 +25,10 @@ page "/*.txt", layout: false
 page "/*.xml", layout: false
 
 # Dynamic pages: Methods
-data.strategies.each do |id, method|
-  proxy "/methods/#{method.title.parameterize}/index.html",
+data.strategies.each do |id, strategy|
+  proxy "/methods/#{strategy.title.parameterize}/index.html",
     "methods/template.html",
-    locals: { method: method },
+    locals: { strategy: strategy },
     ignore: true
 end
 
