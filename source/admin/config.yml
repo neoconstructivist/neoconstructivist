@@ -7,8 +7,8 @@ media_folder: source/assets/images/uploads
 public_folder: assets/images/uploads
 
 collections:
-  - name: methods
-    label: Methods
+  - label: Method
+    name: methods
     folder: data/strategies
     create: true
     format: yaml
@@ -19,12 +19,34 @@ collections:
       - {label: Text, name: text, widget: text, tagname: p}
       - {label: Image, name: image, widget: image}
       - {label: Light, name: light, widget: boolean, default: false}
-  - name: pages
-    label: Pages
+  - label: Project
+    name: work
+    folder: data/projects
+    create: true
+    format: yaml
+    extension: yml
+    fields:
+      - {label: Status, name: status, widget: string}
+      - {label: Title, name: title, widget: string, tagname: h1}
+      - {label: Date, name: date, widget: string}
+      - label: Methods
+        name: methods
+        widget: list
+      - label: Domains
+        name: domains
+        widget: list
+      - {label: Description, name: description, widget: string, tagname: h2}
+      - {label: Introduction, name: introduction, widget: text}
+      - {label: Text, name: text, widget: markdown}
+      - label: Categories
+        name: categories
+        widget: list
+  - label: Pages
+    name: pages
     delete: false
     files:
-      - name: intro
-        label: Intro
+      - label: Intro
+        name: intro
         file: data/intro.yml
         description: Intro text on index page
         fields:
