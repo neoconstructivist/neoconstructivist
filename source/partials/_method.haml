@@ -1,0 +1,6 @@
+%article.method__item
+  = link_to "methods/#{method.title.parameterize}", class: "method__link" do
+    = image_tag method.image, class: "method__image"
+    .method__meta
+      %h2{class: "method__title #{light?(method.light)}"}
+        = method.title
