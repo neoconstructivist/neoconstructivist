@@ -11,6 +11,7 @@ collections:
     label: Method
     folder: data/methods
     create: true
+    format: yaml
     extension: yml
     fields:
       - {label: Title, name: title, widget: string, tagname: h1}
