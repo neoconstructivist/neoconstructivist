@@ -8,8 +8,8 @@ public_folder: assets/images/uploads
 
 collections:
   - name: methods
-    label: Method
-    folder: data/methods
+    label: Methods
+    folder: data/strategies
     create: true
     format: yaml
     extension: yml
