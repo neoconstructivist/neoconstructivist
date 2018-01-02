@@ -16,7 +16,7 @@ collections:
     fields:
       - {label: Title, name: title, widget: string, tagname: h1}
       - {label: Description, name: description, widget: string, tagname: h2}
-      - {label: Content, name: content, widget: markdown}
+      - {label: Text, name: text, widget: text, tagname: p}
       - {label: Image, name: image, widget: image}
       - {label: Light, name: light, widget: boolean, default: false}
   - name: pages
