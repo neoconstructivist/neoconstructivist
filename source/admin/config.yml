@@ -9,8 +9,9 @@ public_folder: assets/images/uploads
 collections:
   - name: methods
     label: Method
-    folder: _methods
+    folder: data/methods
     create: true
+    extension: yml
     fields:
       - {label: Title, name: title, widget: string, tagname: h1}
       - {label: Description, name: description, widget: string, tagname: h2}
