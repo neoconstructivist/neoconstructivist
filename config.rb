@@ -24,6 +24,16 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 page "/*.xml", layout: false
 
+# Dynamic pages: Methods
+data.strategies.each do |id, method|
+  proxy "/methods/#{method.title.parameterize}/index.html",
+    "methods/template.html",
+    locals: { method: method },
+    ignore: true
+end
+
+ignore "methods/template.html"
+
 configure :development do
   activate :livereload do |reload|
     reload.no_swf = true
