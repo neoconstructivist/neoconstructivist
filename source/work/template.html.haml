@@ -1,12 +1,17 @@
-%article.project__row
-  .project__item
+---
+title: project
+---
 
+%article.project__wrapper
+  .project__image-wrapper
+    - if project.images.present?
+      - project.images.each do |image|
+        .project__photo
+          = image_tag image.url, class: "project__image"
   .project__info
-    %h1.project__title
-      = link_to "../../work/#{project.title.parameterize}/", class: "project__link" do
-        = project.title
+    %h1.project__title= project.title
     %h2.project__description= project.description
-    %p.project__preview= project.introduction if project.introduction.present?
+    %p.project__text= project.text
     - if valid_tags?(project)
       .project__category
         %ul.category__list

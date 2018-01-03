@@ -32,7 +32,16 @@ data.strategies.each do |id, strategy|
     ignore: true
 end
 
+# Dynamic pages: Projects
+data.projects.each_value do |project|
+  proxy "/work/#{project.title.parameterize}/index.html",
+    "work/template.html",
+    locals: { project: project },
+    ignore: true
+end
+
 ignore "methods/template.html"
+ignore "work/template.html"
 
 configure :development do
   activate :livereload do |reload|
