@@ -52,9 +52,22 @@ data.projects.each_value do |project|
   end
 end
 
+# Dynamic pages: Categories
+data.projects.each_value do |project|
+  if project.respond_to?(:categories)
+    project.categories.each do |tag|
+      proxy "categories/#{tag.parameterize}/index.html",
+        "categories/template.html",
+        locals: { category: tag },
+        ignore: true
+    end
+  end
+end
+
 ignore "methods/template.html"
 ignore "work/template.html"
 ignore "domains/template.html"
+ignore "categories/template.html"
 
 configure :development do
   activate :livereload do |reload|
