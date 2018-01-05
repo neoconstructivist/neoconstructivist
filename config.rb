@@ -40,8 +40,21 @@ data.projects.each_value do |project|
     ignore: true
 end
 
+# Dynamic pages: Domains
+data.projects.each_value do |project|
+  if project.respond_to?(:domains)
+    project.domains.each do |tag|
+      proxy "domains/#{tag.parameterize}/index.html",
+        "domains/template.html",
+        locals: { domain: tag },
+        ignore: true
+    end
+  end
+end
+
 ignore "methods/template.html"
 ignore "work/template.html"
+ignore "domains/template.html"
 
 configure :development do
   activate :livereload do |reload|

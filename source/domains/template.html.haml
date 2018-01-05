@@ -1,0 +1,14 @@
+---
+title: domain
+---
+
+.intro
+  .intro__item
+    %h1.intro__title= domain
+%section.project-wrapper
+  - if data.respond_to?(:projects)
+    - data.projects.each_value do |project|
+      - if project.respond_to?(:domains)
+        - project.domains.each do |tag|
+          - if tag == domain
+            = partial "partials/project", locals: { project: project }
