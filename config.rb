@@ -23,6 +23,7 @@ set :haml, { format: :html5 }
 page "/*.json", layout: false
 page "/*.txt", layout: false
 page "/*.xml", layout: false
+page "/admin/*", layout: "admin"
 
 # Dynamic pages: Methods
 data.strategies.each do |id, strategy|

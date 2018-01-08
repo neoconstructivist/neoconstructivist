@@ -1,0 +1,12 @@
+!!!
+%html{lang: "en"}
+  %head
+    = partial "partials/head_meta"
+    %title= current_page.data.title
+    / Include the stylesheets from your site here
+    %link{href: "https://unpkg.com/netlify-cms@^1.0.3/dist/cms.css", rel: "stylesheet"}
+    / Include a CMS specific stylesheet here
+  %body
+    = yield
+    / Include the script that builds the page and powers Netlify CMS
+    %script{src: "https://unpkg.com/netlify-cms@^1.0.3/dist/cms.js"}
