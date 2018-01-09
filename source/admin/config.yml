@@ -56,5 +56,16 @@ collections:
         name: about
         file: data/about.yml
         fields:
-          - {label: Title, name: title, widget: string, tagname: h1}
-          - {label: Text, name: body, widget: markdown}
+          - {label: Image, name: image, widget: image}
+          - label: What
+            name: what
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string, tagname: h1}
+              - {label: Text, name: body, widget: markdown}
+          - label: Who
+            name: who
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string, tagname: h1}
+              - {label: Text, name: body, widget: markdown}
