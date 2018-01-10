@@ -57,14 +57,8 @@ collections:
         file: data/about.yml
         fields:
           - {label: Image, name: image, widget: image}
-          - label: What
-            name: what
-            widget: list
-            fields:
-              - {label: Title, name: title, widget: string, tagname: h1}
-              - {label: Text, name: body, widget: markdown}
-          - label: Who
-            name: who
+          - label: Profile
+            name: profile
             widget: list
             fields:
               - {label: Title, name: title, widget: string, tagname: h1}

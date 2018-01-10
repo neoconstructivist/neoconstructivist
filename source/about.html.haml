@@ -6,9 +6,8 @@ title: About
   .about__photo
     = image_tag data.about.image, class: 'about__image'
   .about__info
-    .about__item 
-      %h1.about__title= data.about.what.first.title
-      %p.about__text= data.about.what.first.body
-    .about__item 
-      %h1.about__title= data.about.who.first.title
-      %p.about__text= data.about.who.first.body
+    - if data.about.respond_to?(:profile)
+      - data.about.profile.each do |profile|
+        .about__item
+          %h1.about__title= profile.title
+          %p.about__text= profile.body
