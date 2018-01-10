@@ -1,0 +1,14 @@
+---
+title: About
+---
+
+%section.about
+  .about__photo
+    = image_tag data.about.image, class: 'about__image'
+  .about__info
+    .about__item 
+      %h1.about__title= data.about.what.first.title
+      %p.about__text= data.about.what.first.body
+    .about__item 
+      %h1.about__title= data.about.who.first.title
+      %p.about__text= data.about.who.first.body

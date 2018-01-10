@@ -1,0 +1,40 @@
+.about {
+  @include grid-container;
+
+  margin: 90px 0;
+
+  &__photo {
+    @include grid-column(12);
+  
+    margin-bottom: 30px;
+  
+    @media (min-width: $medium-screen) {
+      @include grid-column(6);
+  
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    @include grid-column(12);
+  
+    @media (min-width: $medium-screen) {
+      @include grid-column(6);
+    }
+  }
+  
+  &__item {
+    margin-bottom: 40px;
+  }
+  
+  &__title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  
+  &__text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
