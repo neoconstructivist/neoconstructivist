@@ -1,5 +1,5 @@
 image: /assets/images/uploads/about.jpg
-what:
+profile:
   - body: >-
       _"It is essential that we be convinced of the goodness of human nature,
       and we must act as though people are good."_
@@ -8,7 +8,6 @@ what:
       Everything we do is a product of bold thinking, an ability to read, write
       and speak the language of both brands and consumers.
     title: What we do
-who:
   - body: >-
       Everything we do is a product of bold thinking, an ability to read, write
       and speak the language of both brands and consumers.
