@@ -4,9 +4,9 @@ title: The Art of Conceptual Engineering
 
 .intro
   .intro__item
-    %h1.intro__title= data.intro.title
-    %p.intro__text= data.intro.text
+    %h1.intro__title= data.intro.try(:title)
+    %p.intro__text= data.intro.try(:text)
 %section.method
-  - if data.respond_to?(:strategies)
+  - if data.try(:strategies).present?
     - data.strategies.each do |id, strategy|
       = partial "partials/method", locals: { strategy: strategy }

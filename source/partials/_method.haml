@@ -1,6 +1,7 @@
 %article.method__item
-  = link_to "methods/#{strategy.title.parameterize}", class: "method__link" do
-    = image_tag strategy.image, class: "method__image"
+  - if strategy.try(:title).present? && strategy.try(:image).present?
+    = link_to "methods/#{strategy.title.parameterize}", class: "method__link" do
+      = image_tag strategy.image, class: "method__image"
     .method__meta
       %h2{class: "method__title #{light?(strategy.light)}"}
-        = strategy.title
+        = strategy.try(:title)

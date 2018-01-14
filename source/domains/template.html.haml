@@ -2,13 +2,13 @@
 title: domain
 ---
 
-.intro
+%section.intro
   .intro__item
     %h1.intro__title= domain
-%section.project-wrapper
-  - if data.respond_to?(:projects)
+%section.project
+  - if data.try(:projects).present?
     - data.projects.each_value do |project|
-      - if project.respond_to?(:domains)
+      - if project.try(:domains).present?
         - project.domains.each do |tag|
           - if tag == domain
             = partial "partials/project", locals: { project: project }

@@ -9,9 +9,9 @@ title: project
         .project__photo
           = image_tag image.url, class: "project__image"
   .project__info
-    %h1.project__title= project.title
-    %h2.project__description= project.description
-    %p.project__text= project.text
+    %h1.project__title= project.try(:title)
+    %h2.project__description= project.try(:description)
+    %p.project__text= project.try(:text)
     - if valid_tags?(project)
       .project__category
         %ul.category__list

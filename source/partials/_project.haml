@@ -3,10 +3,11 @@
 
   .project__info
     %h1.project__title
-      = link_to "../../work/#{project.title.parameterize}/", class: "project__link" do
-        = project.title
-    %h2.project__description= project.description
-    %p.project__preview= project.introduction if project.introduction.present?
+      - if project.try(:title).present?
+        = link_to "../../work/#{project.title.parameterize}/", class: "project__link" do
+          = project.title
+    %h2.project__description= project.try(:description)
+    %p.project__preview= project.try(:introduction)
     - if valid_tags?(project)
       .project__category
         %ul.category__list

@@ -1,5 +1,5 @@
-.intro
+%section.intro
   .intro__item
-    %h1.intro__title= strategy.title
-    %h2.intro__description= strategy.description
-    %p.intro__text= strategy.text
+    %h1.intro__title= strategy.try(:title)
+    %h2.intro__description= strategy.try(:description)
+    %p.intro__text= strategy.try(:text)

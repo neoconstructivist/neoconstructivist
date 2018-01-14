@@ -2,12 +2,14 @@
 title: About
 ---
 
-%section.about
-  .about__photo
-    = image_tag data.about.image, class: 'about__image'
-  .about__info
-    - if data.about.respond_to?(:profile)
-      - data.about.profile.each do |profile|
-        .about__item
-          %h1.about__title= profile.title
-          %p.about__text= profile.body
+- if data.try(:about)
+  %section.about
+    .about__photo
+      - if data.about.try(:image).present?
+        = image_tag data.about.image, class: 'about__image'
+    .about__info
+      - if data.about.try(:profile).present?
+        - data.about.profile.each do |profile|
+          .about__item
+            %h1.about__title= profile.try(:title)
+            %p.about__text= profile.try(:body)

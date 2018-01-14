@@ -3,5 +3,6 @@ title: Work
 ---
 
 %section.project
-  - data.projects.each_value do |project|
-    = partial "partials/project", locals: { project: project }
+  - if data.try(:projects).present?
+    - data.projects.each_value do |project|
+      = partial "partials/project", locals: { project: project }

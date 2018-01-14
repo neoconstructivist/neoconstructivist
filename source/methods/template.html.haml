@@ -4,8 +4,8 @@ title: strategy
 
 = partial "partials/intro", locals: { strategy: strategy }
 
-%section.project-wrapper
-  - if data.respond_to?(:projects)
+%section.project
+  - if data.try(:projects).present?
     - data.projects.each do |id, project|
       - if project.strategies.include?(strategy.title)
         = partial "partials/project", locals: { project: project }

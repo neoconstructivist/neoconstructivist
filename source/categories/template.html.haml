@@ -2,13 +2,13 @@
 title: category
 ---
 
-.intro
+%section.intro
   .intro__item
     %h1.intro__title= category
 %section.project-wrapper
-  - if data.respond_to?(:projects)
+  - if data.try(:projects).present?
     - data.projects.each_value do |project|
-      - if project.respond_to?(:categories)
+      - if project.try(:categories).present?
         - project.categories.each do |tag|
           - if tag == category
             = partial "partials/project", locals: { project: project }
