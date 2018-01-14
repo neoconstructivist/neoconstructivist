@@ -1,0 +1,13 @@
+---
+title: Contact
+---
+
+- if data.try(:contact)
+  %section.contact
+    .contact__photo
+      - if data.contact.try(:image).present?
+        = image_tag data.contact.image, class: 'contact__image'
+    .contact__info
+      .contact__item
+        %h1.contact__title= data.contact.try(:title)
+        %p.contact__text= data.contact.try(:body)
