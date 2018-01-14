@@ -63,3 +63,10 @@ collections:
             fields:
               - {label: Title, name: title, widget: string, tagname: h1}
               - {label: Text, name: body, widget: markdown}
+      - label: Contact
+        name: contact
+        file: data/contact.yml
+        fields:
+          - {label: Image, name: image, widget: image}
+          - {label: Title, name: title, widget: string, tagname: h1}
+          - {label: Text, name: body, widget: markdown}
