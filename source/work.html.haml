@@ -1,0 +1,7 @@
+---
+title: Work
+---
+
+%section.project
+  - data.projects.each_value do |project|
+    = partial "partials/project", locals: { project: project }
